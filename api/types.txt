@@ -1,0 +1,28 @@
+///Graphql Basic Types 
+
+
+scalar_types = ['int, float, string, boolean, id']
+
+type Livro {
+    id: ID!
+    titulo: String!
+    autoria: String!
+    paginas: Int!
+    colecoes: [Colecao!]!
+}   //type object
+
+type Query {
+    livros: [Livro!]!
+    livro(id: ID!): Livro!
+}
+
+type Mutation {
+    adicionaLivro(titulo: String!, autoria: String!, paginas: Int!, colecoes: Colecao!): Livro!
+}
+
+
+/// Other types:
+///        Enum,
+///        Input,
+///        Interface,
+///        Union.
