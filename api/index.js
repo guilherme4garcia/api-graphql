@@ -5,7 +5,6 @@ const UsersAPI = require('./user/datasource/user')
 
 
 
-
 /// SDL, linguagem de definiçao de schema do GraphQL 
 
 
@@ -21,6 +20,9 @@ const server = new ApolloServer({
         }
     } 
 })
+
+
+
 
 server.listen().then(({url}) => {
     console.log(`Servidor rodando na porta ${url}`)
